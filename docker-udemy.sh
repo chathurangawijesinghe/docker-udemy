@@ -1,3 +1,24 @@
-docker run --name sqlserver2019 -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=SqlServer@2019' -p 1433:1433 -v 'sqlserver2019data:/var/opt/mssql' -d mcr.microsoft.com/mssql/server:2019-latest
+# verified cli can talk to engine
+docker version
+# most config values of engine
+docker info
+# for all commands available
+docker help
+# docker command line structure
+old -> docker <command> (options)
+new -> docker <command> <sub-command> (options)
 
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=SqlServer@2019' -p 1433:1433 -v '<host directory>:/var/opt/mssql' -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+# Image vs. Container
+an image is the application we want to run
+a container is an instance of that image running as a process
+docker''s default image registry is called docker hub
+
+# not working for me
+docker container run --publish 80:80 nginx
+docker container run --publish 80:80 --detach nginx
+docker container run --publish 80:80 amd64/nginx
+docker container logs webhost
+docker container top 
+docker container rm -f 
+
+
