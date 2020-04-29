@@ -21,4 +21,19 @@ docker container logs webhost
 docker container top 
 docker container rm -f 
 
+docker contanier top - process list in one container
+docker container inspect - details of one container config
+docker container stats - performance stats for all containers
+
+docker container run -it - start new container interactively
+docker container exec -it - run additional command in existing container 
+
+docker image history 
+docker image inspect
+
+docker image tag 
+docker image push 
+
+ 
+
 
